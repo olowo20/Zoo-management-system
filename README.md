@@ -1,25 +1,22 @@
-# Zoo-management-system
-The Zoo class contains the main method where instances of Lion, Elephant, and Monkey are created to demonstrate polymorphism by calling the overridden methods for making sounds and eating specific foods.
- the code is as below 
- // Animal class
+// Animal class
 class Animal {
     String name;
     int age;
 
     public void makeSound() {
-        // Default sound
+        // Default makeSound method
     }
 
     public void eat() {
-        // Default eating behavior
+        // Default eat method
     }
 
     public void makeSound(int times) {
-        // Overloaded method for making sound multiple times
+        // Overloaded makeSound method
     }
 
     public void eat(String foodType) {
-        // Overloaded method for eating a specific food type
+        // Overloaded eat method
     }
 }
 
@@ -69,12 +66,20 @@ public class Zoo {
         Animal elephant = new Elephant();
         Animal monkey = new Monkey();
 
-        // Polymorphism demonstration
+        // Polymorphism using overloaded methods
         lion.makeSound();
         lion.eat();
+        lion.makeSound(3);
+        lion.eat("meat");
+
         elephant.makeSound();
         elephant.eat();
+        elephant.makeSound(2);
+        elephant.eat("grass");
+
         monkey.makeSound();
         monkey.eat();
+        monkey.makeSound(4);
+        monkey.eat("bananas");
     }
 }
